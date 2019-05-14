@@ -57,7 +57,7 @@ if grep -q "sudo python \/opt\/RetroFlag\/SafeShutdownTinker.py \&" "$RC";
 	then
 		echo "File /etc/rc.local already configured. Doing nothing."
 	else
-		sed -i -e "s/^exit 0/sudo python \/opt\/RetroFlag\/SafeShutdownTinker.py \&\n&/g" "$RC"
+		sudo sed -i -e "s/^exit 0/sudo python \/opt\/RetroFlag\/SafeShutdownTinker.py \&\n&/g" "$RC"
 		echo "File /etc/rc.local configured."
 fi
 #-----------------------------------------------------------
