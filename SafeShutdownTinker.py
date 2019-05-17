@@ -70,6 +70,7 @@ def reboot():
 	
 try:
 	while True:
+		time.sleep(0.1)
 		if GPIO.input(resetPin) == GPIO.LOW:
 			reboot()
 		elif GPIO.input(powerPin):
